@@ -1,0 +1,1 @@
+A small web API to demonstrate authentication & authorization.
