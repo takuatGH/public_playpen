@@ -11,13 +11,13 @@
 
         public static ICollection<string> GetRoles(string role)
         {
-            var roleLevel = Roles.SingleOrDefault(x => x.Value == role).Key;
-            var testList = new List<string>();
-            for(int i = roleLevel; i > 0;  i--)
+            var accessLevel = Roles.SingleOrDefault(x => x.Value == role).Key;
+            var authorizedRoles = new List<string>();
+            for(int i = accessLevel; i > 0;  i--)
             {
-                testList.Add(Roles[i]);
+                authorizedRoles.Add(Roles[i]);
             }
-            return testList;
+            return authorizedRoles;
         }
     }
 }
